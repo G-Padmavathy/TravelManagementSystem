@@ -1,0 +1,38 @@
+<!-- Update your HTML code for displaying train information -->
+<div class="main-content">
+  <div class="custom-container">
+    <h2>Train List</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Train Number</th>
+          <th>Train Name</th>
+          <th>Capacity</th>
+          <th>Departure</th>
+          <th>Arrival</th>
+          <th>Source</th>
+          <th>Destination</th>
+          <th>Ticket Amount</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let temptrain of train">
+          <td>{{ temptrain.trainId }}</td>
+          <td>{{ temptrain.trainNumber }}</td>
+          <td>{{ temptrain.trainName }}</td>
+          <td>{{ temptrain.capacity }}</td>
+          <td>{{ temptrain.departure | date : "MM/dd/yy, h:mm a" }}</td>
+          <td>{{ temptrain.arrival | date : "MM/dd/yy, h:mm a" }}</td>
+          <td>{{ temptrain.source }}</td>
+          <td>{{ temptrain.destination }}</td>
+          <td>{{ temptrain.ticket_amount }}</td>
+          <td>
+            <button (click)="navigateToBookTrain(temptrain.trainId)">Book</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

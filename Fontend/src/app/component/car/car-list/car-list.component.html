@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo">Welcome {{ user.first_name.toUpperCase() }} {{ user.last_name.toUpperCase() }} !!</a>
+    <nav class="nav-items">
+      <a href="/user/userHome">Home</a>
+      <a href="#">About</a>
+      <!-- <a href="user/login" (click)="logout()">LogOut</a> -->
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <div class="custom-container">
+      <h2>Car List</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Car Number</th>
+            <th>Car Model</th>
+            <th>Color</th>
+            <th>Arrival Time</th>
+            <th>Departure Time</th>
+            <th>Route</th>
+            <th>Ticket Amount</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tempcar of car">
+            <td>{{ tempcar.carId }}</td>
+            <td>{{ tempcar.carNumber }}</td>
+            <td>{{ tempcar.carModel }}</td>
+            <td>{{ tempcar.color }}</td>
+            <td>{{ tempcar.arrivalTime }}</td>
+            <td>{{ tempcar.departureTime }}</td>
+            <td>{{ tempcar.route }}</td>
+            <td>{{ tempcar.ticketAmount }}</td>
+            <td>
+              <button (click)="navigateToUpdateCar(tempcar.carId)">Book</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

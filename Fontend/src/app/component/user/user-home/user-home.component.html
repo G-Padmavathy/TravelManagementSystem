@@ -1,0 +1,29 @@
+<!-- user-home.component.html -->
+<body>
+  
+    <header class="header">
+      <a href="#" class="logo">WELCOME {{ user.first_name.toUpperCase() }}.{{ user.last_name.toUpperCase() }}</a>
+      <nav class="nav-items">
+        <a href="/userHome">Home</a>
+        <a href="/helpchat">Help Desk</a>
+        <a href="/myprofile">My Profile</a>
+        <a href="user/login" (click)="logout()">LogOut</a>
+      </nav>
+    </header>
+  </body>
+    
+
+
+<main>
+   <div class="intro">
+    <!-- <h1>Discover Your Next Adventure</h1>
+    <p>Embark on a journey of a lifetime</p>
+
+    <div>
+      <h1>Welcome, Traveler</h1>
+      -->
+    <!-- </div>  -->
+
+    <button><a href="/bookhome">Start Booking</a></button>
+  </div>
+</main>

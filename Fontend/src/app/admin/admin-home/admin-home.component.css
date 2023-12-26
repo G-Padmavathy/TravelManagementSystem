@@ -1,0 +1,73 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #89c930; /* Set your desired background color */
+}
+
+.main {
+  margin: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.col-4 {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+}
+
+.cardBox {
+  background-color: #4ef36a;
+  border: 1px solid #1d854d;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(53, 92, 76, 0.349);
+  transition: transform 0.3s ease;
+}
+
+.cardBox:hover {
+  transform: translateY(-5px);
+}
+
+.card {
+  padding: 80px;
+  height: 100%;
+}
+
+.topic {
+  color: #333333;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-customer {
+  background-color: #ffc107; /* Yellow */
+}
+
+.card-booking {
+  background-color: #28a745; /* Green */
+}
+
+.card-payment {
+  background-color: #007bff; /* Blue */
+}
+
+.nav-option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: auto;
+  color: #333333;
+}
+
+.nav-img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
